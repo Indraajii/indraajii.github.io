@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title>Lope</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: absolute;
+        background-color: rgb(43, 5, 78);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* line-height: 100vh; */
+        height: 100%;
+        width: 100%;
+      }
+      .container {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        /* line-height: 100vh; */
+        background-color: transparent;
+        width: 400px;
+        height: 100px;
+      }
+      .lope {
+        width: 90px;
+        height: 90px;
+        background-color: rgb(255, 0, 221);
+        transform: rotate(45deg);
+        animation: jedug 10s linear infinite;
+        transition: 3s;
+        box-shadow: 5px 5px 15px rgb(255, 0, 221);
+      }
+      .love {
+        width: 200px;
+        height: 90px;
+        color: white;
+        justify-content: center;
+      }
+      h2 {
+        display: flex;
+        position: absolute;
+        width: 200px;
+        justify-content: center;
+        text-align: center;
+        z-index: 2;
+        padding-top: 215px;
+        color: white;
+      }
+
+      @keyframes jedug {
+        0% {
+          transform: scale(1) rotate(45deg);
+        }
+        10% {
+          transform: scale(1.1) rotate(45deg);
+        }
+        20% {
+          transform: scale(1) rotate(45deg);
+        }
+        30% {
+          transform: scale(1.1) rotate(45deg);
+        }
+        40% {
+          transform: scale(1) rotate(45deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(45deg);
+        }
+        60% {
+          transform: scale(1) rotate(45deg);
+        }
+        70% {
+          transform: scale(1.1) rotate(45deg);
+        }
+        80% {
+          transform: scale(1) rotate(45deg);
+        }
+        100% {
+          transform: scale(1.1) rotate(45deg);
+        }
+      }
+      .lope::before {
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-color: rgb(255, 0, 221);
+        position: absolute;
+        display: flex;
+        right: 50%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 15px rgb(255, 0, 221);
+      }
+      .lope::after {
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-color: rgb(255, 0, 221);
+        position: absolute;
+        display: flex;
+        bottom: 50%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 15px rgb(255, 0, 221);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="love"></h2>
+    <div class="container">
+      <div class="lope" onclick="typeWriter()"></div>
+    </div>
+    <div class="soundcloud">
+      <iframe
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1446394558&color=%23ff5500&auto_play=true&hide_related=false&hide_comments=true&hide_user=true&hide_reposts=false&shide_teaser=true&visual=true"
+        hidden
+      ></iframe>
+      <div
+        style="
+          font-size: 10px;
+          color: #cccccc;
+          line-break: anywhere;
+          word-break: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+            Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+          font-weight: 100;
+        "
+      >
+        <a
+          href="https://soundcloud.com/adelynnxx"
+          title="Adelynn"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+          >Adelynn</a
+        >
+        ·
+        <a
+          href="https://soundcloud.com/adelynnxx/ountil-i-found-you-x-i-would"
+          title="•UNTIL I FOUND YOU x I WOULD RATHER DIE•"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none"
+        ></a>
+      </div>
+    </div>
+
+    <script>
+      //   var i = 0;
+      //   var txt = "Sri Winda Wihana";
+      //   var speed = 50;
+
+      //   function typeWriter() {
+      //     if (i < txt.length) {
+      //       document.getElementById("love").innerHTML += txt.charAt(i);
+      //       i++;
+      //       setTimeout(typeWriter, speed);
+      //     }
+      //   }
+
+      var love = document.getElementById("love");
+
+      var customNodeCreator = function (character) {
+        return document.createTextNode(character);
+      };
+
+      var typewriter = new Typewriter(love, {
+        loop: true,
+        delay: 90,
+        onCreateTextNode: customNodeCreator,
+      });
+
+      typewriter.typeString("Sri Winda Wihana").pauseFor(400).start();
+    </script>
+  </body>
+</html>
