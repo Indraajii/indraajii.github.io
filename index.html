@@ -123,11 +123,17 @@
          height="0">
     
       
-<audio loop autoplay controlers>
+<audio id="musik" loop autoplay controlers>
   <source src="Komang.mp3" type="audio/mp3">
 </audio>
 
     <script>
+      window.onload = function(){
+        var r = confirm("Ingin Memutar Musik?");
+        if (r == true) {
+            document.getElementById("musik").play();
+        }
+     }
 
       var love = document.getElementById("love");
 
