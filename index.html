@@ -47,7 +47,7 @@
         color: white;
         justify-content: center;
       }
-      h3 {
+      h2 {
         display: flex;
         position: absolute;
         width: 200px;
@@ -118,10 +118,15 @@
         display: flex;
         position: absolute;
       }
+      @media only screen and (max-width: 600px) {
+        h2 {
+            font-size: 22pt;
+        }
+      }
     </style>
   </head>
   <body>
-    <h3 id="love"></h3>
+    <h2 id="love"></h2>
     <div class="container">
       <div class="lope" onclick="playAudio()"></div>
     </div>
