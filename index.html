@@ -112,26 +112,25 @@
         border-radius: 50%;
         box-shadow: 5px 5px 15px rgb(255, 0, 221);
       }
+      audio {
+        width: 175px;
+        height: 380px;
+        display: flex;
+        position: absolute;
+      }
     </style>
   </head>
   <body>
     <h2 id="love"></h2>
     <div class="container">
-      <div class="lope"></div>
+      <div class="lope" onclick="playAudio()"></div>
     </div>
-      
-<audio id="musik" controls="" loop>
-  <source src="Komang.mp3" type="audio/mp3">
-</audio>
+
+    <audio id="musik" controls="" loop>
+      <source src="Komang.mp3" type="audio/mp3" />
+    </audio>
 
     <script>
-      window.onload = function(){
-        var r = confirm("Ingin Memutar Musik?");
-        if (r == true) {
-            document.getElementById("musik").play();
-        }
-     }
-
       var love = document.getElementById("love");
 
       var customNodeCreator = function (character) {
